@@ -41,6 +41,7 @@ type OutgoingWebhookPayload struct {
 	UserName    string `json:"user_name"`
 	PostId      string `json:"post_id"`
 	Text        string `json:"text"`
+	Locale      string `json:"locale"`
 	TriggerWord string `json:"trigger_word"`
 	FileIds     string `json:"file_ids"`
 }
@@ -74,6 +75,7 @@ func (o *OutgoingWebhookPayload) ToFormValues() string {
 	v.Set("user_name", o.UserName)
 	v.Set("post_id", o.PostId)
 	v.Set("text", o.Text)
+	v.Set("locale", o.Locale)
 	v.Set("trigger_word", o.TriggerWord)
 	v.Set("file_ids", o.FileIds)
 

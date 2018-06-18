@@ -71,6 +71,7 @@ func (a *App) handleWebhookEvents(post *model.Post, team *model.Team, channel *m
 			TeamDomain:  team.Name,
 			ChannelId:   post.ChannelId,
 			ChannelName: channel.Name,
+			Locale:      user.Locale,
 			Timestamp:   post.CreateAt,
 			UserId:      post.UserId,
 			UserName:    user.Username,

@@ -221,6 +221,7 @@ func (a *App) ExecuteCommand(args *model.CommandArgs) (*model.CommandResponse, *
 				p.Set("user_id", args.UserId)
 				p.Set("user_name", user.Username)
 
+				p.Set("locale", user.Locale)
 				p.Set("command", "/"+trigger)
 				p.Set("text", message)
 
